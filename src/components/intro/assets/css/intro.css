@@ -1,0 +1,34 @@
+.intro {
+  position: absolute;
+  width: 100%;
+  min-height: 670px;
+  background: linear-gradient(0deg, #f5f9fd, rgba(255, 255, 255, 0) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.intro h1 {
+  position: relative;
+  padding: 70px 80px;
+  font: 44px 'ArvoRegular';
+  font-weight: 550;
+  text-align: center;
+  color: #4f86be;
+}
+
+.intro p {
+  font: 31px 'ArvoRegular';
+  padding: 0 80px;
+}
+
+.intro:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  clip-path: polygon(100% 30%, 0 100%, 100% 100%);
+}

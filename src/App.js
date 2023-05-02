@@ -1,23 +1,58 @@
-import logo from './logo.svg';
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from 'react';
 import './App.css';
+import NavBar from './components/navbar/NavBar';
+import Intro from './components/intro/Intro';
+import OurServices from './components/ourServices/OurServices';
+import 'animate.css';
 
 function App() {
+  const [scrollTop, setScrollTop] = useState(0);
+  const [removeNavRelative, setRemoveNavRelative] = useState(false);
+
+  useEffect(() => {
+    const nav = document.getElementById('navbar');
+    const navTop = nav.offsetTop;
+
+    function reveal() {
+      var reveals = document.querySelector('.reveal');
+      console.log(reveals);
+      // for (var i = 0; i < reveals.length; i++) {
+      //   var windowHeight = window.innerHeight;
+      //   var elementTop = reveals[i].getBoundingClientRect().top;
+      //   var elementVisible = 150;
+      //   if (elementTop < windowHeight - elementVisible) {
+      //     reveals[i].classList.add('animate__animated');
+      //   } else {
+      //     reveals[i].classList.remove('animate__animated');
+      //   }
+      // }
+    }
+
+    const handleScroll = (event) => {
+      setScrollTop(window.scrollY);
+      reveal();
+      if (window.scrollY >= navTop) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        setRemoveNavRelative(true);
+      } else {
+        document.body.style.paddingTop = 0;
+        setRemoveNavRelative(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar removeNavRelative={removeNavRelative}></NavBar>
+      <Intro></Intro>
+      <OurServices></OurServices>
     </div>
   );
 }

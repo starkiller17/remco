@@ -1,0 +1,44 @@
+.header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--remco-blue);
+  height: 20vh;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.header > h1 > a {
+  font-family: 'ArvoRegular';
+  color: #fff;
+  font-size: 80px;
+  text-shadow: 3px 2px 0 rgb(0 0 0 / 20%);
+  text-decoration: none;
+}
+
+#navbar {
+  transition: all 0.5s linear;
+  z-index: 1;
+  font-family: 'ArvoRegular';
+  font-size: 21px;
+}
+
+#logo {
+  transition: all 0.5s linear;
+  max-width: 0;
+  overflow: hidden;
+}
+
+#navbar.navbar.is-fixed-top {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+#navbar.navbar-relative {
+  top: 0;
+  position: relative;
+}
+
+#logo.navbar-item.display-logo {
+  max-width: 100%;
+}
