@@ -114,7 +114,7 @@ function OurServices() {
                 <FontAwesomeIcon
                   icon={faLightbulb}
                   size="5x"
-                  style={{ color: '#FCAC89' }}
+                  style={{ color: '#B9CDCB' }}
                 />
                 <h3 className="px-3">Asesoría Especializada</h3>
                 <div className="card-content">

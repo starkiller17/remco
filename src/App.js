@@ -5,6 +5,7 @@ import NavBar from './components/navbar/NavBar';
 import Intro from './components/intro/Intro';
 import OurServices from './components/ourServices/OurServices';
 import HowWeDoIt from './components/howWeDoIt/HowWeDoIt';
+import AboutUs from './components/aboutUs/AboutUs';
 import 'animate.css';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <Intro></Intro>
       <OurServices></OurServices>
       <HowWeDoIt></HowWeDoIt>
+      <AboutUs></AboutUs>
     </div>
   );
 }
