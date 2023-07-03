@@ -1,10 +1,11 @@
 .our-process-main {
   margin-top: 120px;
 }
+
 .our-process {
   font-size: 19px;
   font-weight: 600;
-  color: #0b6e4f;
+  color: var(--soft-red);
 }
 
 .all-process-container {
@@ -26,7 +27,7 @@
 .process-title {
   font-size: 20px;
   font-weight: 550;
-  color: #1e3050;
+  color: #1a6633;
 }
 
 .process-description {
@@ -34,4 +35,10 @@
   font-weight: 500;
   line-height: 2;
   text-align: center;
+}
+
+.slogan {
+  font-weight: 700;
+  font-size: 23px;
+  color: #1e3050;
 }

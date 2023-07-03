@@ -10,6 +10,12 @@ function HowWeDoIt() {
   return (
     <article className="container our-process-main">
       <div className="our-process is-align-content-center">NUESTRO PROCESO</div>
+      <p className="slogan">
+        Con nuestra gran experiencia y variedad de soluciones.
+        <br />
+        Ahorra tiempo y dinero mientras tus procesos progresan y continúan
+        mejorando.
+      </p>
       <div className="columns all-process-container">
         <div className="column is-one-third">
           <div className="process-card">

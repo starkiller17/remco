@@ -25,6 +25,7 @@ function NavBar({ removeNavRelative }) {
         role="navigation"
         aria-label="main navigation"
         id="navbar"
+        style={{ paddingTop: '25px' }}
       >
         <div className="navbar-brand ml-6">
           <a
