@@ -14,7 +14,7 @@ import mailIconHover from './assets/img/mail-icon-hover.svg';
 
 function OurServices() {
   return (
-    <article className="container" style={{ marginTop: '670px' }}>
+    <article className="container our-services-container">
       <div className="columns">
         <div className="column is-one-third how-we-do-it">
           <AnimationOnScroll animateIn="animate__fadeInLeft">
