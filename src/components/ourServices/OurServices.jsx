@@ -70,63 +70,69 @@ function OurServices() {
         <div className="column is-two-thirds">
           <div className="columns">
             <div className="column is-one-third">
-              <div className="card automate pt-2">
-                <FontAwesomeIcon
-                  icon={faGears}
-                  size="5x"
-                  style={{ color: '#FCAC89' }}
-                />
-                <h3 className="px-3">Proyectos de Automotización</h3>
-                <div className="card-content">
-                  <div className="content has-text-justified px-3">
-                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
-                    at eros. Donec id elit non mi porta gravida at eget metus.
-                    Cum sociis natoque penatibus et magnis dis parturient
-                    montes, montes, nascetur ridiculus mus. Cras mattis
-                    consectetur fermentum.
+              <AnimationOnScroll animateIn="animate__bounceInLeft">
+                <div className="card automate pt-2">
+                  <FontAwesomeIcon
+                    icon={faGears}
+                    size="5x"
+                    style={{ color: '#FCAC89' }}
+                  />
+                  <h3 className="px-3">Proyectos de Automotización</h3>
+                  <div className="card-content">
+                    <div className="content has-text-justified px-3 service-text">
+                      Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                      at eros. Donec id elit non mi porta gravida at eget metus.
+                      Cum sociis natoque penatibus et magnis dis parturient
+                      montes, montes, nascetur ridiculus mus. Cras mattis
+                      consectetur fermentum.
+                    </div>
                   </div>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             <div className="column is-one-third">
-              <div className="card product pt-2">
-                <FontAwesomeIcon
-                  icon={faBolt}
-                  size="5x"
-                  style={{ color: '#9E8CB6' }}
-                />
-                <h3 className="px-3">Selección de Productos</h3>
-                <div className="card-content">
-                  <div className="content has-text-justified px-3">
-                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
-                    at eros. Donec id elit non mi porta gravida at eget metus.
-                    Cum sociis natoque penatibus et magnis dis parturient
-                    montes, montes, nascetur ridiculus mus. Cras mattis
-                    consectetur fermentum.
+              <AnimationOnScroll animateIn="animate__bounceIn">
+                <div className="card product pt-2">
+                  <FontAwesomeIcon
+                    icon={faBolt}
+                    size="5x"
+                    style={{ color: '#9E8CB6' }}
+                  />
+                  <h3 className="px-3">Selección de Productos</h3>
+                  <div className="card-content">
+                    <div className="content has-text-justified px-3 service-text">
+                      Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                      at eros. Donec id elit non mi porta gravida at eget metus.
+                      Cum sociis natoque penatibus et magnis dis parturient
+                      montes, montes, nascetur ridiculus mus. Cras mattis
+                      consectetur fermentum.
+                    </div>
                   </div>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             <div className="column is-one-third">
-              <div className="card advisory pt-2">
-                <FontAwesomeIcon
-                  icon={faLightbulb}
-                  size="5x"
-                  style={{ color: '#B9CDCB' }}
-                />
-                <h3 className="px-3">Asesoría Especializada</h3>
-                <div className="card-content">
-                  <div className="content has-text-justified px-3">
-                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
-                    at eros. Donec id elit non mi porta gravida at eget metus.
-                    Cum sociis natoque penatibus et magnis dis parturient
-                    montes, montes, nascetur ridiculus mus. Cras mattis
-                    consectetur fermentum.
+              <AnimationOnScroll animateIn="animate__bounceInRight">
+                <div className="card advisory pt-2">
+                  <FontAwesomeIcon
+                    icon={faLightbulb}
+                    size="5x"
+                    style={{ color: '#B9CDCB' }}
+                  />
+                  <h3 className="px-3">Asesoría Especializada</h3>
+                  <div className="card-content">
+                    <div className="content has-text-justified px-3 service-text">
+                      Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                      at eros. Donec id elit non mi porta gravida at eget metus.
+                      Cum sociis natoque penatibus et magnis dis parturient
+                      montes, montes, nascetur ridiculus mus. Cras mattis
+                      consectetur fermentum.
+                    </div>
                   </div>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
         </div>

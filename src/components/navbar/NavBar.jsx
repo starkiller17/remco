@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import logoREMCO from './assets/img/remco_logo.png';
 import './assets/css/navbar.css';
-// import whatsAppIcon from './assets/img/whatsapp_icon_144.svg';
 
 function NavBar({ removeNavRelative }) {
   const [isBurguerMenuActive, setIsBurguerMenuActive] = useState(false);
@@ -14,9 +13,10 @@ function NavBar({ removeNavRelative }) {
   return (
     <>
       <header className="header">
-        <h1>
-          <a href="/">REMCO</a>
-        </h1>
+        <div className="title-wrapper">
+          <h1>Reductores, Motores y Controles SLP</h1>
+          <h2>Magnificencia en ventas más allá de sus expectativas...</h2>
+        </div>
       </header>
       <nav
         className={
@@ -27,12 +27,14 @@ function NavBar({ removeNavRelative }) {
         id="navbar"
         style={{ paddingTop: '25px' }}
       >
-        <div className="navbar-brand ml-6">
+        <div className="navbar-brand">
           <a
             className={
               removeNavRelative ? 'navbar-item display-logo' : 'navbar-item'
             }
             id="logo"
+            href="/"
+            rel="noopener noreferrer"
           >
             <img
               src={logoREMCO}

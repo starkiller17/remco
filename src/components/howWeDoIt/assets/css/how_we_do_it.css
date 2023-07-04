@@ -8,10 +8,6 @@
   color: var(--soft-red);
 }
 
-.all-process-container {
-  margin-top: 30px;
-}
-
 .process-card {
   display: flex;
   align-items: center;
@@ -31,7 +27,7 @@
 }
 
 .process-description {
-  font-size: 17px;
+  font-size: 1.2em;
   font-weight: 500;
   line-height: 2;
   text-align: center;
@@ -41,4 +37,5 @@
   font-weight: 700;
   font-size: 23px;
   color: #1e3050;
+  margin-bottom: 3em;
 }

@@ -36,5 +36,9 @@ h3 {
 }
 
 .our-services-container {
-  margin-top: 45em;
+  margin-top: 60em;
+}
+
+.service-text {
+  font-size: 1.2em;
 }
