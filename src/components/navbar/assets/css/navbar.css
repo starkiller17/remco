@@ -75,3 +75,11 @@
 #logo.navbar-item.display-logo {
   max-width: 100%;
 }
+
+.navbar-options > a,
+.navbar-options > div > a,
+.navbar-options > div > a > div {
+  color: #4942d6 !important;
+  font-weight: 500;
+  font-family: 'ArvoRegular';
+}

@@ -66,13 +66,13 @@ function NavBar({ removeNavRelative }) {
             isBurguerMenuActive ? '"navbar-menu is-active' : 'navbar-menu'
           }
         >
-          <div className="navbar-end mr-6">
+          <div className="navbar-end mr-6 navbar-options">
             <a className="navbar-item">Marcas</a>
             <a className="navbar-item">Ubicación</a>
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">Conócenos</a>
 
-              <div className="navbar-dropdown">
+              <div className="navbar-dropdown navbar-options">
                 <a className="navbar-item">Misión/Visión</a>
                 <a className="navbar-item">Valores</a>
                 <a className="navbar-item">Principios Empresariales</a>

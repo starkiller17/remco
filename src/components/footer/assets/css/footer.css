@@ -1,0 +1,28 @@
+.footer {
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content {
+  margin-top: -1em;
+  background: #4942d6;
+  /* background: #564dff; */
+  color: white;
+  padding-bottom: 2em;
+}
+
+.footer-text {
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-left: 1em;
+}
+
+.copyright {
+  background: #564dff;
+  color: white;
+}

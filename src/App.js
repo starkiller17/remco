@@ -6,7 +6,9 @@ import Intro from './components/intro/Intro';
 import OurServices from './components/ourServices/OurServices';
 import HowWeDoIt from './components/howWeDoIt/HowWeDoIt';
 import AboutUs from './components/aboutUs/AboutUs';
+import Foter from './components/footer/Footer';
 import 'animate.css';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [scrollTop, setScrollTop] = useState(0);
@@ -41,6 +43,7 @@ function App() {
       <OurServices></OurServices>
       <HowWeDoIt></HowWeDoIt>
       <AboutUs></AboutUs>
+      <Footer></Footer>
     </div>
   );
 }
