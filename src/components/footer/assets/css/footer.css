@@ -1,10 +1,10 @@
 .footer-margin {
+  position: relative;
   z-index: 1;
   margin-top: -6em;
 }
 
 .footer {
-  z-index: 10;
   width: 100%;
   height: auto;
   bottom: 0;
