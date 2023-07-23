@@ -5,12 +5,23 @@ import './assets/styles/bulma.min.css';
 import './assets/styles/colors.css';
 import './assets/fonts/Arvo/Arvo-Regular.ttf';
 import App from './App';
+import Error from './components/error/Error';
 import reportWebVitals from './reportWebVitals';
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <Error />,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

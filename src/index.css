@@ -14,7 +14,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 200vh;
+  /* height: 200vh; */
 }
 
 code {

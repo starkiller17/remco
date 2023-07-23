@@ -1,14 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
 import NavBar from './components/navbar/NavBar';
-import Intro from './components/intro/Intro';
-import OurServices from './components/ourServices/OurServices';
-import HowWeDoIt from './components/howWeDoIt/HowWeDoIt';
-import AboutUs from './components/aboutUs/AboutUs';
-import Foter from './components/footer/Footer';
+import Home from './pages/Home';
 import 'animate.css';
-import Footer from './components/footer/Footer';
 
 function App() {
   const [scrollTop, setScrollTop] = useState(0);
@@ -38,12 +35,12 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar removeNavRelative={removeNavRelative}></NavBar>
-      <Intro></Intro>
-      <OurServices></OurServices>
-      <HowWeDoIt></HowWeDoIt>
-      <AboutUs></AboutUs>
-      <Footer></Footer>
+      <Routes>
+        <Route
+          path="/"
+          element={<Home removeNavRelative={removeNavRelative} />}
+        ></Route>
+      </Routes>
     </div>
   );
 }
