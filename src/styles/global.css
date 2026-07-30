@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+
+  /* Primary - Deep Steel Blue */
+  --color-primary: #1B3A5C;
+  --color-primary-light: #2A5A8C;
+  --color-primary-dark: #0F2640;
+
+  /* Accent - Electric Teal */
+  --color-accent: #00B4D8;
+  --color-accent-light: #48CAE4;
+  --color-accent-dark: #0096B7;
+
+  /* Secondary - Warm Amber */
+  --color-secondary: #F59E0B;
+  --color-secondary-light: #FBBF24;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-primary;
+  }
+}

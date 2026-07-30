@@ -1,11 +1,13 @@
 import Mission from '../components/mission/Mission';
+import WhatsAppButton from '../components/common/WhatsAppButton';
 
-function Us() {
+export default function Us() {
   return (
     <>
-      <Mission />
+      <div className="pt-16">
+        <Mission />
+      </div>
+      <WhatsAppButton />
     </>
   );
 }
-
-export default Us;

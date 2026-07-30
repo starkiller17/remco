@@ -1,41 +1,28 @@
 import { useRouteError } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import logoREMCO from '../navbar/assets/img/remco_logo.png';
-import './assets/error.css';
 
 export default function Error() {
   const error = useRouteError();
 
   return (
-    <div id="error-page">
-      <img className="remco-logo" src={logoREMCO} alt="Logo REMCO" />
-      <section className="error-container">
-        <span className="four">
-          <span className="screen-reader-text">4</span>
-        </span>
-        <span className="zero">
-          <span className="screen-reader-text">0</span>
-        </span>
-        <span className="four">
-          <span className="screen-reader-text">4</span>
-        </span>
-      </section>
-      <p className="zoom-area">
-        <i>{error.statusText || error.message}</i>
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex flex-col items-center justify-center px-4 text-center">
+      <img src={logoREMCO} alt="REMCO" className="h-16 w-auto mb-8 opacity-80" />
+      <h1 className="font-display text-8xl font-bold text-primary dark:text-white mb-4">
+        404
+      </h1>
+      <p className="text-neutral-500 dark:text-neutral-400 text-lg mb-2">
+        Página no encontrada
       </p>
-
+      {error && (
+        <p className="text-neutral-400 dark:text-neutral-500 text-sm mb-8">
+          {error.statusText || error.message}
+        </p>
+      )}
       <a
         href="/"
-        className="more-link is-flex is-align-items-center is-justify-content-start"
-        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-light text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
       >
-        <FontAwesomeIcon
-          icon={faCircleLeft}
-          size="2x"
-          style={{ color: '#FFFF' }}
-        />{' '}
-        <span className="ml-4">Regresar</span>
+        Regresar al inicio
       </a>
     </div>
   );
