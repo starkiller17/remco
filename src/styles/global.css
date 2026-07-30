@@ -22,6 +22,11 @@
   --color-secondary-light: #FBBF24;
 }
 
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

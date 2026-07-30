@@ -6,6 +6,7 @@ import logoREMCO from './assets/img/remco_logo.png';
 
 const navLinks = [
   { label: 'Inicio', href: '/#hero' },
+  { label: 'Marcas', href: '/#marcas' },
   { label: 'Servicios', href: '/#servicios' },
   { label: 'Proceso', href: '/#proceso' },
   { label: 'Nosotros', href: '/nosotros' },
