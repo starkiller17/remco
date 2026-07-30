@@ -69,6 +69,8 @@ function Footer() {
               <div className="column is-one-third">
                 <a
                   href="https://goo.gl/maps/jUryCTD8gJqQ8oJv7"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="footer-link is-flex is-align-items-center is-justify-content-start"
                 >
                   <FontAwesomeIcon

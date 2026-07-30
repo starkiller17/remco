@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import logoREMCO from './assets/img/remco_logo.png';
 import './assets/css/navbar.css';
+import { Link } from 'react-router-dom';
 
 function NavBar({ removeNavRelative }) {
   const [isBurguerMenuActive, setIsBurguerMenuActive] = useState(false);
@@ -25,7 +26,6 @@ function NavBar({ removeNavRelative }) {
         role="navigation"
         aria-label="main navigation"
         id="navbar"
-        style={{ paddingTop: '25px' }}
       >
         <div className="navbar-brand">
           <a
@@ -67,7 +67,9 @@ function NavBar({ removeNavRelative }) {
           }
         >
           <div className="navbar-end mr-6 navbar-options">
-            <a className="navbar-item">Marcas</a>
+            <Link className="navbar-item" to={`nosotros`}>
+              Marcas
+            </Link>
             <a className="navbar-item">Ubicación</a>
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">Conócenos</a>

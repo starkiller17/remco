@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
 import './App.css';
 import NavBar from './components/navbar/NavBar';
@@ -18,10 +18,10 @@ function App() {
     const handleScroll = (event) => {
       setScrollTop(window.scrollY);
       if (window.scrollY >= navTop) {
-        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        // document.body.style.paddingTop = nav.offsetHeight + 'px';
         setRemoveNavRelative(true);
       } else {
-        document.body.style.paddingTop = 0;
+        // document.body.style.paddingTop = 0;
         setRemoveNavRelative(false);
       }
     };
@@ -35,12 +35,11 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar removeNavRelative={removeNavRelative}></NavBar>
       <Routes>
-        <Route
-          path="/"
-          element={<Home removeNavRelative={removeNavRelative} />}
-        ></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
+      <Outlet />
     </div>
   );
 }

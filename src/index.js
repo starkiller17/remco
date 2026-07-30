@@ -10,11 +10,19 @@ import reportWebVitals from './reportWebVitals';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import Us from './pages/Us';
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <Error />,
+    children: [
+      {
+        path: 'nosotros',
+        element: <Us />,
+      },
+    ],
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
