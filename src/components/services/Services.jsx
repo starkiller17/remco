@@ -48,7 +48,9 @@ export default function Services() {
             Lo que hacemos
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary dark:text-white mb-4">
-            ¿Cómo le podemos ayudar?
+            Tú tienes el qué y el porqué de tus procesos.
+            <br />
+            Nosotros te ayudamos con el como...
           </h2>
           <p className="text-neutral-500 dark:text-neutral-400 max-w-2xl mx-auto text-lg">
             Soluciones integrales en automatización industrial con el respaldo de las marcas líderes del sector.

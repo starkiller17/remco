@@ -180,7 +180,7 @@ export default function Brands() {
             <p className="font-display text-7xl sm:text-8xl font-bold text-accent leading-none"
               style={{ textShadow: '0 0 40px rgba(0, 180, 216, 0.3)' }}
             >
-              <AnimatedCounter to={41} duration={2} />
+              <AnimatedCounter to={40} duration={2} />
               <span>+</span>
             </p>
           </motion.div>

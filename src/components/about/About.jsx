@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: '15+', label: 'Años de experiencia' },
-  { value: '3', label: 'Marcas autorizadas' },
+  { value: '25+', label: 'Años de experiencia' },
+  { value: 'TODO', label: 'Tipo de industria' },
   { value: 'SLP', label: 'San Luis Potosí' },
   { value: '∞', label: 'Compromiso' },
 ];
@@ -23,10 +23,10 @@ export default function About() {
               Acerca de nosotros
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary dark:text-white mb-6">
-              Más de 15 años de experiencia
+              Más de 25 años de experiencia
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed mb-4">
-              Somos distribuidores autorizados de Baldor, ABB y Dodge en San Luis Potosí.
+              Somos distribuidores autorizados de Baldor, ABB, B&R, Dodge, NORD y LS Electric en San Luis Potosí.
               Nuestra experiencia nos permite ofrecer soluciones confiables en motores
               eléctricos, reductores de velocidad y sistemas de control industrial.
             </p>

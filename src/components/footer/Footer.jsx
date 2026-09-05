@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: faPhone,
     label: 'Teléfono',
-    value: '(444) 101 85 69',
-    href: 'tel:+524441018569',
+    value: '(444) 567 63 12',
+    href: 'tel:+524445676312',
   },
   {
     icon: faEnvelope,
@@ -41,7 +41,7 @@ const socialLinks = [
   {
     icon: faLocationDot,
     label: 'Ubicación',
-    href: 'https://goo.gl/maps/jUryCTD8gJqQ8oJv7',
+    href: 'https://maps.app.goo.gl/pT8aTy4b8ZpDcYaN7',
   },
   {
     icon: faThumbsUp,

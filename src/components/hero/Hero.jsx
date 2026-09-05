@@ -44,8 +44,9 @@ export default function Hero() {
             variants={item}
             className="text-neutral-200 text-lg leading-relaxed mb-8 max-w-xl"
           >
-            Distribuidores autorizados de Baldor, ABB y Dodge en San Luis Potosí.
-            Más de 15 años brindando asesoría especializada en automatización industrial.
+            Ayudamos a las empresas a cumplir la visión de sus procesos,
+            mediante asesoría, implementeación y servicio personalizados.<br />
+            Más de 25 años de experiencia especializada en automatización industrial y más de 30 clientes satisfechos nos respaldan.
           </motion.p>
 
           <motion.div variants={item} className="flex flex-wrap gap-4">
@@ -77,10 +78,10 @@ export default function Hero() {
             <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-white">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { value: '15+', label: 'Años de experiencia' },
-                  { value: '3', label: 'Marcas autorizadas' },
+                  { value: '25+', label: 'Años de experiencia' },
+                  { value: '30+', label: 'Clientes' },
                   { value: '100%', label: 'Compromiso' },
-                  { value: '24/7', label: 'Soporte técnico' },
+                  { value: '40+', label: 'Marcas disponibles' },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <p className="text-3xl font-bold text-accent-light">{stat.value}</p>
@@ -95,7 +96,7 @@ export default function Hero() {
               transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
               className="absolute -top-4 -right-4 bg-white rounded-xl px-4 py-2 shadow-xl"
             >
-              <p className="text-primary font-bold text-sm">Baldor · ABB · Dodge</p>
+              <p className="text-primary font-bold text-sm">Baldor · ABB · B&R · Dodge · NORD · LS Electric</p>
             </motion.div>
           </div>
         </motion.div>

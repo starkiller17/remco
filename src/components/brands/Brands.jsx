@@ -48,6 +48,11 @@ const featuredBrands = [
   { src: baldor, alt: 'Baldor', desc: 'Motores eléctricos industriales' },
   { src: abb, alt: 'ABB', desc: 'Automatización y control' },
   { src: dodge, alt: 'Dodge', desc: 'Transmisión de potencia' },
+  { src: nord, alt: 'Nord', desc: 'Motorreductores y variadores' },
+  { src: lsElectric, alt: 'LS Electric', desc: 'Variadores de frecuencia y PLCs' },
+  { src: brAutomation, alt: 'B&R Automation', desc: 'Automatización avanzada' },
+  { src: wago, alt: 'Wago', desc: 'Conexiones y control industrial' },
+  { src: lapp, alt: 'Lapp', desc: 'Cables y conectores industriales' },
 ];
 
 // All remaining brands for the marquee rows
@@ -81,18 +86,13 @@ const marqueeRow2 = [
   { src: thk, alt: 'THK' },
   { src: nsk, alt: 'NSK' },
   { src: rexroth, alt: 'Rexroth' },
-  { src: lsElectric, alt: 'LS Electric' },
   { src: transtecno, alt: 'Transtecno' },
   { src: sewEurodrive, alt: 'SEW-Eurodrive' },
   { src: sumitomo, alt: 'Sumitomo' },
   { src: leeson, alt: 'Leeson' },
   { src: marathonElectric, alt: 'Marathon Electric' },
   { src: weg, alt: 'WEG' },
-  { src: nord, alt: 'Nord' },
-  { src: lapp, alt: 'Lapp' },
-  { src: wago, alt: 'Wago' },
   { src: kbElectronics, alt: 'KB Electronics' },
-  { src: brAutomation, alt: 'B&R Automation' },
 ];
 
 // Animated counting number
@@ -168,7 +168,7 @@ export default function Brands() {
               className="font-display text-7xl sm:text-8xl font-bold text-accent leading-none"
               style={{ textShadow: '0 0 40px rgba(0, 180, 216, 0.3)' }}
             >
-              <AnimatedCounter to={41} duration={2} />
+              <AnimatedCounter to={40} duration={2} />
               <span>+</span>
             </p>
           </motion.div>
@@ -202,7 +202,7 @@ export default function Brands() {
         </div>
 
         {/* Featured brands — 3 showcase cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-16">
           {featuredBrands.map((brand, i) => (
             <motion.div
               key={brand.alt}
