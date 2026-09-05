@@ -4,13 +4,13 @@ const stats = [
   { value: '25+', label: 'Años de experiencia' },
   { value: 'TODO', label: 'Tipo de industria' },
   { value: 'SLP', label: 'San Luis Potosí' },
-  { value: '∞', label: 'Compromiso' },
+  { value: '100%', label: 'Mexicana' },
 ];
 
 export default function About() {
   return (
-    <section id="acerca" className="py-24 bg-white dark:bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="acerca" className="min-h-screen flex items-center py-24 bg-neutral-50 dark:bg-neutral-950">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
           <motion.div
@@ -23,17 +23,13 @@ export default function About() {
               Acerca de nosotros
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary dark:text-white mb-6">
-              Más de 25 años de experiencia
+              Empresa 100% mexicana
             </h2>
-            <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed mb-4">
-              Somos distribuidores autorizados de Baldor, ABB, B&R, Dodge, NORD y LS Electric en San Luis Potosí.
-              Nuestra experiencia nos permite ofrecer soluciones confiables en motores
-              eléctricos, reductores de velocidad y sistemas de control industrial.
+            <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed mb-4 text-justify">
+              Somos unas empresa 100% mexicana, dando soluciones a sus aplicaciones de movimiento.
             </p>
-            <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8">
-              Contamos con una extensa gama de productos: motores eléctricos, electrónicos,
-              hidráulicos, neumáticos y de transmisión de potencia, respaldados por el
-              soporte técnico de las marcas líderes del sector.
+            <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4 text-justify">
+              Ofrecemos marcas líderes en el mercada nacional e internacional en: Transmisión de Potencia, Motores - Controles & Servos AC/DC, Componentes para Automatización y Manejo de Materiales.
             </p>
 
             {/* Blockquote */}

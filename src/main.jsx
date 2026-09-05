@@ -6,7 +6,6 @@ import './styles/global.css';
 
 import App from './App';
 import Home from './pages/Home';
-import Us from './pages/Us';
 import Error from './components/error/Error';
 
 const router = createBrowserRouter([
@@ -14,10 +13,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <Error />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'nosotros', element: <Us /> },
-    ],
+    children: [{ index: true, element: <Home /> }],
   },
 ]);
 

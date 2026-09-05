@@ -19,14 +19,14 @@ const steps = [
     icon: faPaperPlane,
     title: 'Optimizar',
     description:
-      'Implementamos la solución y le brindamos seguimiento para garantizar el máximo rendimiento y eficiencia.',
+      'Implementamos conjuntamente la solución, brindando soporte y seguimiento para garantizar el máximo rendimiento y eficiencia.',
   },
 ];
 
 export default function Process() {
   return (
-    <section id="proceso" className="py-24 bg-neutral-50 dark:bg-neutral-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="proceso" className="min-h-screen flex items-center py-24 bg-white dark:bg-neutral-900">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function Process() {
               >
                 {/* Circle with icon */}
                 <div className="relative mb-6">
-                  <div className="w-20 h-20 rounded-full bg-white dark:bg-neutral-900 border-2 border-accent flex items-center justify-center shadow-lg shadow-accent/10">
+                  <div className="w-20 h-20 rounded-full bg-neutral-50 dark:bg-neutral-950 border-2 border-accent flex items-center justify-center shadow-lg shadow-accent/10">
                     <FontAwesomeIcon icon={step.icon} className="text-accent text-2xl" />
                   </div>
                   <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center">

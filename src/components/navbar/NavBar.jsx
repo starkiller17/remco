@@ -8,19 +8,31 @@ const navLinks = [
   { label: 'Inicio', href: '/#hero' },
   { label: 'Marcas', href: '/#marcas' },
   { label: 'Servicios', href: '/#servicios' },
+  { label: 'Industrias', href: '/#sectores' },
   { label: 'Proceso', href: '/#proceso' },
-  { label: 'Nosotros', href: '/nosotros' },
+  { label: 'Nosotros', href: '/#acerca' },
   { label: 'Contacto', href: '/#contacto' },
 ];
 
 export default function NavBar() {
   const [isOpaque, setIsOpaque] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState('hero');
   const { isDark, toggle } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setIsOpaque(window.scrollY > 80);
+    const lastHash = navLinks[navLinks.length - 1]?.href.split('#')[1];
+
+    const handleScroll = () => {
+      setIsOpaque(window.scrollY > 80);
+
+      // Short trailing sections (e.g. the footer) may never cross the
+      // scroll-spy's center threshold, so treat "at the bottom" explicitly.
+      if (lastHash && window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
+        setActiveHash(lastHash);
+      }
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -29,7 +41,40 @@ export default function NavBar() {
     setIsDrawerOpen(false);
   }, [location]);
 
+  // Scroll-spy: highlight the nav link for the section currently in view
+  useEffect(() => {
+    if (location.pathname !== '/') return undefined;
+
+    const sectionIds = navLinks
+      .map((link) => link.href.split('#')[1])
+      .filter(Boolean);
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    if (elements.length === 0) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveHash(entry.target.id);
+        });
+      },
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
   const isTransparent = !isOpaque && !isDrawerOpen;
+
+  const isLinkActive = (href) => {
+    const hash = href.split('#')[1];
+    return hash
+      ? location.pathname === '/' && activeHash === hash
+      : location.pathname === href;
+  };
 
   return (
     <>
@@ -41,32 +86,43 @@ export default function NavBar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <a href="/" className="flex items-center shrink-0">
               <img
                 src={logoREMCO}
                 alt="REMCO"
-                className={`h-10 w-auto transition-all duration-300 ${isTransparent ? 'brightness-0 invert' : ''}`}
+                className={`h-20 w-auto transition-all duration-300 ${isTransparent ? 'brightness-0 invert' : ''}`}
               />
             </a>
 
             {/* Desktop links */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className={`relative text-sm font-medium transition-colors group ${
-                    isTransparent
-                      ? 'text-white/90 hover:text-white'
-                      : 'text-neutral-700 dark:text-neutral-200 hover:text-accent dark:hover:text-accent'
-                  }`}
-                >
-                  {link.label}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = isLinkActive(link.href);
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className={`relative text-sm font-medium transition-colors group ${
+                      isActive
+                        ? isTransparent
+                          ? 'text-white'
+                          : 'text-accent'
+                        : isTransparent
+                          ? 'text-white/90 hover:text-white'
+                          : 'text-neutral-700 dark:text-neutral-200 hover:text-accent dark:hover:text-accent'
+                    }`}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute -bottom-0.5 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </a>
+                );
+              })}
             </div>
 
             {/* Right actions */}
@@ -134,7 +190,7 @@ export default function NavBar() {
               className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-white dark:bg-neutral-900 shadow-2xl md:hidden flex flex-col"
             >
               <div className="flex items-center justify-between p-4 border-b border-neutral-100 dark:border-neutral-800">
-                <img src={logoREMCO} alt="REMCO" className="h-8 w-auto" />
+                <img src={logoREMCO} alt="REMCO" className="h-14 w-auto" />
                 <button
                   onClick={() => setIsDrawerOpen(false)}
                   className="p-2 rounded-md text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
@@ -147,19 +203,26 @@ export default function NavBar() {
               </div>
 
               <nav className="flex flex-col p-4 gap-1">
-                {navLinks.map((link, i) => (
-                  <motion.a
-                    key={link.label}
-                    href={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05 }}
-                    onClick={() => setIsDrawerOpen(false)}
-                    className="px-4 py-3 rounded-lg text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-accent transition-colors font-medium"
-                  >
-                    {link.label}
-                  </motion.a>
-                ))}
+                {navLinks.map((link, i) => {
+                  const isActive = isLinkActive(link.href);
+                  return (
+                    <motion.a
+                      key={link.label}
+                      href={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.05 }}
+                      onClick={() => setIsDrawerOpen(false)}
+                      className={`px-4 py-3 rounded-lg border-l-2 transition-colors font-medium ${
+                        isActive
+                          ? 'border-accent text-accent bg-neutral-100 dark:bg-neutral-800'
+                          : 'border-transparent text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-accent'
+                      }`}
+                    >
+                      {link.label}
+                    </motion.a>
+                  );
+                })}
               </nav>
 
               <div className="mt-auto p-4 border-t border-neutral-100 dark:border-neutral-800">

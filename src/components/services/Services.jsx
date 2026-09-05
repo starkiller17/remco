@@ -19,7 +19,7 @@ const services = [
     iconBgClass: 'bg-purple-100 dark:bg-purple-900/40',
     title: 'Selección de Productos',
     description:
-      'Le ayudamos a seleccionar el equipo ideal entre nuestra amplia gama de reductores, motores y controles de las mejores marcas.',
+      'Simplificamos su cadena de adquisiciones con nuevas soluciones en refacciones, equipos e insumos industriales, seleccionando el equipo ideal dentro de nuestra amplia gama de las mejores marcas.',
   },
   {
     icon: faLightbulb,
@@ -28,7 +28,7 @@ const services = [
     iconBgClass: 'bg-teal-100 dark:bg-teal-900/40',
     title: 'Asesoría Especializada',
     description:
-      'Más de 15 años como distribuidores autorizados de Baldor, ABB y Dodge para brindarle la mejor asesoría técnica en cada etapa.',
+      'Más de 25 años de experiencia nos respaldan para brindarle la mejor asesoría técnica en cada etapa.',
   },
 ];
 
@@ -77,7 +77,7 @@ export default function Services() {
               <h3 className="font-semibold text-xl text-neutral-800 dark:text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
+              <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify">
                 {service.description}
               </p>
             </motion.div>
@@ -94,6 +94,7 @@ export default function Services() {
         >
           <a
             href="mailto:remco.slp@outlook.com"
+            target="_blank"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-light text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
           >
             Enviar correo

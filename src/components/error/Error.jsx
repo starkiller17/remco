@@ -6,7 +6,11 @@ export default function Error() {
 
   return (
     <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex flex-col items-center justify-center px-4 text-center">
-      <img src={logoREMCO} alt="REMCO" className="h-16 w-auto mb-8 opacity-80" />
+      <img
+        src={logoREMCO}
+        alt="REMCO"
+        className="h-[50vh] w-auto max-w-full object-contain mb-8 opacity-80"
+      />
       <h1 className="font-display text-8xl font-bold text-primary dark:text-white mb-4">
         404
       </h1>

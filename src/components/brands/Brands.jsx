@@ -141,7 +141,7 @@ function MarqueeRow({ brands, reverse = false, speed = 35 }) {
               src={brand.src}
               alt={brand.alt}
               loading="lazy"
-              className="max-h-10 sm:max-h-12 max-w-full object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 mix-blend-multiply dark:mix-blend-normal dark:invert dark:brightness-200 dark:contrast-75"
+              className="max-h-10 sm:max-h-12 max-w-full object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}
@@ -224,7 +224,7 @@ export default function Brands() {
                 <img
                   src={brand.src}
                   alt={brand.alt}
-                  className="max-h-16 max-w-full object-contain mix-blend-multiply dark:mix-blend-normal dark:invert dark:brightness-200 dark:contrast-75 group-hover:scale-110 transition-transform duration-300"
+                  className="max-h-16 max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <h3 className="font-display text-xl font-bold text-primary dark:text-white mb-1">

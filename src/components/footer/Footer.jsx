@@ -33,8 +33,9 @@ const navLinks = [
   { label: 'Inicio', href: '/#hero' },
   { label: 'Marcas', href: '/#marcas' },
   { label: 'Servicios', href: '/#servicios' },
+  { label: 'Industrias', href: '/#sectores' },
   { label: 'Proceso', href: '/#proceso' },
-  { label: 'Nosotros', href: '/nosotros' },
+  { label: 'Nosotros', href: '/#acerca' },
 ];
 
 const socialLinks = [
@@ -60,11 +61,11 @@ export default function Footer() {
             <img
               src={logoREMCO}
               alt="REMCO"
-              className="h-10 w-auto mb-4 brightness-0 invert"
+              className="h-20 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-sm leading-relaxed text-neutral-400">
               Reductores, Motores y Controles SLP. Distribuidores autorizados de Baldor,
-              ABB y Dodge.
+              ABB, B&R, Dodge, NORD y LS Electric.
             </p>
           </div>
 
