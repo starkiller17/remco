@@ -26,10 +26,10 @@ export default function About() {
               Empresa 100% mexicana
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed mb-4 text-justify">
-              Somos unas empresa 100% mexicana, dando soluciones a sus aplicaciones de movimiento.
+              Somos una empresa 100% mexicana, dando soluciones a sus aplicaciones de movimiento.
             </p>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4 text-justify">
-              Ofrecemos marcas líderes en el mercada nacional e internacional en: Transmisión de Potencia, Motores - Controles & Servos AC/DC, Componentes para Automatización y Manejo de Materiales.
+              Ofrecemos marcas líderes en el mercado nacional e internacional en: Transmisión de Potencia, Motores - Controles & Servos AC/DC, Componentes para Automatización y Manejo de Materiales.
             </p>
 
             {/* Blockquote */}
