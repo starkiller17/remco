@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 
-import manufactura from '../../assets/sectors/manufactura.jpg';
-import energia from '../../assets/sectors/energia.jpg';
-import mineria from '../../assets/sectors/mineria.jpg';
-import construccion from '../../assets/sectors/construccion.jpg';
-import quimica from '../../assets/sectors/quimica.jpg';
-import agricultura from '../../assets/sectors/agricultura.jpg';
-import imprenta from '../../assets/sectors/imprenta.jpg';
-import plantas from '../../assets/sectors/plantas.jpg';
-import alimentos from '../../assets/sectors/alimentos.jpg';
-import materiales from '../../assets/sectors/materiales.jpg';
+import manufactura from '../../assets/sectors/manufactura.webp';
+import energia from '../../assets/sectors/energia.webp';
+import mineria from '../../assets/sectors/mineria.webp';
+import construccion from '../../assets/sectors/construccion.webp';
+import quimica from '../../assets/sectors/quimica.webp';
+import agricultura from '../../assets/sectors/agricultura.webp';
+import imprenta from '../../assets/sectors/imprenta.webp';
+import plantas from '../../assets/sectors/plantas.webp';
+import alimentos from '../../assets/sectors/alimentos.webp';
+import materiales from '../../assets/sectors/materiales.webp';
 
 const sectors = [
   { img: manufactura, name: 'Manufactura y Automotriz' },
@@ -62,7 +62,7 @@ export default function Sectors() {
             >
               <img
                 src={sector.img}
-                alt={sector.name}
+                alt={`Soluciones industriales para ${sector.name} en San Luis Potosí`}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />

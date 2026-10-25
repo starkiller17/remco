@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import heroBg from '../navbar/assets/img/header_background.jpg';
+import heroBg from '../navbar/assets/img/header_background.webp';
 
 const container = {
   hidden: {},
@@ -29,7 +29,7 @@ export default function Hero() {
             variants={item}
             className="text-accent-light text-sm font-semibold uppercase tracking-widest mb-4"
           >
-            Reductores · Motores · Controles
+            Reductores · Motores · Controles en San Luis Potosí
           </motion.p>
 
           <motion.h1
@@ -45,8 +45,8 @@ export default function Hero() {
             className="text-neutral-200 text-lg leading-relaxed mb-8 max-w-xl text-justify"
           >
             Ayudamos a las empresas a cumplir la visión de sus procesos,
-            mediante asesoría, implementeación y servicio personalizados.<br />
-            Más de 25 años de experiencia especializada en automatización industrial y más de 30 clientes satisfechos nos respaldan.
+            mediante asesoría, implementación y servicio personalizados.<br />
+            Distribuidor autorizado de Baldor, ABB y Dodge. Más de 25 años de experiencia especializada en automatización industrial y más de 30 clientes satisfechos nos respaldan.
           </motion.p>
 
           <motion.div variants={item} className="flex flex-wrap gap-4">

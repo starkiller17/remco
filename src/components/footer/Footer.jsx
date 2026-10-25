@@ -5,6 +5,7 @@ import {
   faEnvelope,
   faLocationDot,
   faThumbsUp,
+  faClock,
 } from '@fortawesome/free-solid-svg-icons';
 import logoREMCO from '../navbar/assets/img/remco_logo.png';
 
@@ -29,6 +30,19 @@ const contactInfo = [
   },
 ];
 
+const addressInfo = [
+  {
+    icon: faLocationDot,
+    label: 'Dirección',
+    value: 'Privada Quinta del Pedregal, Calle 1, San Luis Potosí, S.L.P.',
+  },
+  {
+    icon: faClock,
+    label: 'Horario',
+    value: 'Lunes a viernes, 9:00 a 18:30 h',
+  },
+];
+
 const navLinks = [
   { label: 'Inicio', href: '/#hero' },
   { label: 'Marcas', href: '/#marcas' },
@@ -41,7 +55,7 @@ const navLinks = [
 const socialLinks = [
   {
     icon: faLocationDot,
-    label: 'Ubicación',
+    label: 'Ver en Google Maps',
     href: 'https://maps.app.goo.gl/pT8aTy4b8ZpDcYaN7',
   },
   {
@@ -60,12 +74,12 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <img
               src={logoREMCO}
-              alt="REMCO"
+              alt="REMCO SLP - Reductores, Motores y Controles"
               className="h-20 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-sm leading-relaxed text-neutral-400">
               Reductores, Motores y Controles SLP. Distribuidores autorizados de Baldor,
-              ABB, B&R, Dodge, NORD y LS Electric.
+              ABB, B&R, Dodge, NORD, LS Electric, Wago y Lapp.
             </p>
           </div>
 
@@ -132,6 +146,22 @@ export default function Footer() {
                     />
                     {item.value}
                   </a>
+                </li>
+              ))}
+              {addressInfo.map((item) => (
+                <li
+                  key={item.label}
+                  className="flex items-start gap-3 text-neutral-400 text-sm"
+                >
+                  <FontAwesomeIcon
+                    icon={item.icon}
+                    className="w-4 mt-0.5 text-accent shrink-0"
+                  />
+                  {item.label === 'Dirección' ? (
+                    <address className="not-italic">{item.value}</address>
+                  ) : (
+                    <span>{item.value}</span>
+                  )}
                 </li>
               ))}
             </ul>

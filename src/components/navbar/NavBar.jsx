@@ -91,7 +91,7 @@ export default function NavBar() {
             <a href="/" className="flex items-center shrink-0">
               <img
                 src={logoREMCO}
-                alt="REMCO"
+                alt="REMCO SLP - Reductores, Motores y Controles" width="80" height="80"
                 className={`h-20 w-auto transition-all duration-300 ${isTransparent ? 'brightness-0 invert' : ''}`}
               />
             </a>
@@ -190,7 +190,7 @@ export default function NavBar() {
               className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-white dark:bg-neutral-900 shadow-2xl md:hidden flex flex-col"
             >
               <div className="flex items-center justify-between p-4 border-b border-neutral-100 dark:border-neutral-800">
-                <img src={logoREMCO} alt="REMCO" className="h-14 w-auto" />
+                <img src={logoREMCO} alt="REMCO SLP - Reductores, Motores y Controles" width="80" height="80" className="h-14 w-auto" />
                 <button
                   onClick={() => setIsDrawerOpen(false)}
                   className="p-2 rounded-md text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"

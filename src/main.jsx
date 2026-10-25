@@ -1,6 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ViteReactSSG } from 'vite-react-ssg';
 
 import './styles/global.css';
 
@@ -8,17 +6,13 @@ import App from './App';
 import Home from './pages/Home';
 import Error from './components/error/Error';
 
-const router = createBrowserRouter([
+export const routes = [
   {
     path: '/',
     element: <App />,
     errorElement: <Error />,
     children: [{ index: true, element: <Home /> }],
   },
-]);
+];
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+export const createRoot = ViteReactSSG({ routes });

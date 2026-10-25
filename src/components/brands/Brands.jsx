@@ -117,34 +117,37 @@ function AnimatedCounter({ to, duration = 2 }) {
 
 // CSS-powered marquee row
 function MarqueeRow({ brands, reverse = false, speed = 35 }) {
-  const doubled = [...brands, ...brands];
+  const renderLogos = (hidden) =>
+    brands.map((brand) => (
+      <div
+        key={`${brand.alt}-${hidden ? 'copy' : 'main'}`}
+        aria-hidden={hidden || undefined}
+        className="group flex-shrink-0 flex items-center justify-center w-28 sm:w-36 h-14 sm:h-16 px-3"
+      >
+        <img
+          src={brand.src}
+          alt={hidden ? '' : `Logo ${brand.alt}`}
+          loading="lazy"
+          className="max-h-10 sm:max-h-12 max-w-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+        />
+      </div>
+    ));
 
   return (
-    <div className="relative overflow-hidden py-4">
+    <div className="marquee relative overflow-hidden py-4">
       {/* Fade edges */}
       <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-32 z-10 bg-gradient-to-r from-neutral-50 dark:from-neutral-950 to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-32 z-10 bg-gradient-to-l from-neutral-50 dark:from-neutral-950 to-transparent" />
 
       <div
-        className="flex gap-10 sm:gap-14 w-max"
+        className="marquee-track flex gap-10 sm:gap-14 w-max"
         style={{
-          animation: `marquee-scroll ${speed}s linear infinite`,
-          animationDirection: reverse ? 'reverse' : 'normal',
+          '--marquee-duration': `${speed}s`,
+          '--marquee-direction': reverse ? 'reverse' : 'normal',
         }}
       >
-        {doubled.map((brand, i) => (
-          <div
-            key={`${brand.alt}-${i}`}
-            className="group flex-shrink-0 flex items-center justify-center w-28 sm:w-36 h-14 sm:h-16 px-3"
-          >
-            <img
-              src={brand.src}
-              alt={brand.alt}
-              loading="lazy"
-              className="max-h-10 sm:max-h-12 max-w-full object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-            />
-          </div>
-        ))}
+        {renderLogos(false)}
+        {renderLogos(true)}
       </div>
     </div>
   );
@@ -223,7 +226,7 @@ export default function Brands() {
               <div className="flex items-center justify-center h-20 mb-5">
                 <img
                   src={brand.src}
-                  alt={brand.alt}
+                  alt={`Logo ${brand.alt}`}
                   className="max-h-16 max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
@@ -255,6 +258,11 @@ export default function Brands() {
         <MarqueeRow brands={marqueeRow1} speed={40} />
         <MarqueeRow brands={marqueeRow2} reverse speed={45} />
       </motion.div>
+
+      <p className="sr-only">
+        También distribuimos las marcas:{' '}
+        {[...marqueeRow1, ...marqueeRow2].map((b) => b.alt).join(', ')}.
+      </p>
     </section>
   );
 }

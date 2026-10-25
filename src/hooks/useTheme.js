@@ -1,22 +1,24 @@
 import { useState, useEffect } from 'react';
 
 export function useTheme() {
-  const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  const [isDark, setIsDark] = useState(false);
 
+  // Read the stored preference after mount so server and client markup match.
   useEffect(() => {
-    const root = document.documentElement;
-    if (isDark) {
-      root.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDark]);
+    const saved = localStorage.getItem('theme');
+    setIsDark(
+      saved
+        ? saved === 'dark'
+        : window.matchMedia('(prefers-color-scheme: dark)').matches
+    );
+  }, []);
 
-  return { isDark, toggle: () => setIsDark((d) => !d) };
+  const toggle = () => {
+    const next = !isDark;
+    setIsDark(next);
+    document.documentElement.classList.toggle('dark', next);
+    localStorage.setItem('theme', next ? 'dark' : 'light');
+  };
+
+  return { isDark, toggle };
 }
