@@ -31,7 +31,7 @@ export default function Process() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ type: 'spring', damping: 20 }}
           className="text-center mb-16"
         >
@@ -52,7 +52,7 @@ export default function Process() {
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
             className="hidden md:block absolute top-10 left-[calc(16.67%+2.5rem)] right-[calc(16.67%+2.5rem)] h-0.5 bg-gradient-to-r from-accent to-accent-light origin-left"
           />
@@ -63,7 +63,7 @@ export default function Process() {
                 key={step.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: '-80px' }}
                 transition={{ delay: i * 0.2, type: 'spring', damping: 20 }}
                 className="flex flex-col items-center text-center"
               >

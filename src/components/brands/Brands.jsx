@@ -163,7 +163,7 @@ export default function Brands() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ type: 'spring', damping: 20 }}
             className="mb-4"
           >
@@ -180,7 +180,7 @@ export default function Brands() {
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, ease: 'easeInOut', delay: 0.1 }}
             className="h-px w-24 bg-gradient-to-r from-accent to-accent-light mx-auto mb-6 origin-center"
           />
@@ -188,7 +188,7 @@ export default function Brands() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ type: 'spring', damping: 20, delay: 0.2 }}
           >
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
@@ -211,7 +211,7 @@ export default function Brands() {
               key={brand.alt}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: '-80px' }}
               transition={{ delay: 0.3 + i * 0.12, type: 'spring', damping: 20 }}
               whileHover={{
                 y: -6,
@@ -251,7 +251,7 @@ export default function Brands() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: '-80px' }}
         transition={{ delay: 0.2, duration: 0.6 }}
         className="space-y-1"
       >

@@ -32,7 +32,7 @@ export default function Sectors() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ type: 'spring', damping: 20 }}
           className="text-center mb-16"
         >
@@ -55,7 +55,7 @@ export default function Sectors() {
               key={sector.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: '-80px' }}
               transition={{ delay: i * 0.06, type: 'spring', damping: 20 }}
               whileHover={{ y: -6, transition: { type: 'spring', stiffness: 300 } }}
               className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-default"

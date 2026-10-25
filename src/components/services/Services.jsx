@@ -40,7 +40,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ type: 'spring', damping: 20 }}
           className="text-center mb-16"
         >
@@ -64,7 +64,7 @@ export default function Services() {
               key={service.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: '-80px' }}
               transition={{ delay: i * 0.15, type: 'spring', damping: 20 }}
               whileHover={{ y: -6, transition: { type: 'spring', stiffness: 300 } }}
               className={`${service.bgClass} rounded-2xl p-8 border border-neutral-100 dark:border-neutral-800 group cursor-default`}
@@ -88,7 +88,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ delay: 0.4 }}
           className="mt-16 text-center flex flex-wrap gap-4 justify-center"
         >

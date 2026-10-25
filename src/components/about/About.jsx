@@ -16,7 +16,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ type: 'spring', damping: 20 }}
           >
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
@@ -48,7 +48,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ type: 'spring', damping: 20, delay: 0.1 }}
             className="flex justify-center"
           >
@@ -60,7 +60,7 @@ export default function About() {
                       key={stat.label}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true, margin: '-80px' }}
                       transition={{ delay: 0.2 + i * 0.1 }}
                       className="text-center"
                     >
