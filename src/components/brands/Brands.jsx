@@ -155,7 +155,7 @@ function MarqueeRow({ brands, reverse = false, speed = 35 }) {
 
 export default function Brands() {
   return (
-    <section id="marcas" className="py-24 bg-neutral-50 dark:bg-neutral-950 overflow-hidden">
+    <section id="marcas" className="py-24 sm:py-32 bg-neutral-50 dark:bg-neutral-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header with animated counter */}

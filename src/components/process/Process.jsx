@@ -25,8 +25,8 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="proceso" className="min-h-screen flex items-center py-24 bg-white dark:bg-neutral-900">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="proceso" className="py-24 sm:py-32 bg-white dark:bg-neutral-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

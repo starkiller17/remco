@@ -26,8 +26,8 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <section id="sectores" className="min-h-screen flex items-center py-24 bg-neutral-50 dark:bg-neutral-950">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sectores" className="py-24 sm:py-32 bg-neutral-50 dark:bg-neutral-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
