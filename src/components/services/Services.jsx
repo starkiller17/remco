@@ -50,7 +50,7 @@ export default function Services() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary dark:text-white mb-4">
             Tú tienes el qué y el porqué de tus procesos.
             <br />
-            Nosotros te ayudamos con el como...
+            Nosotros te ayudamos con el cómo...
           </h2>
           <p className="text-neutral-500 dark:text-neutral-400 max-w-2xl mx-auto text-lg">
             Soluciones integrales en automatización industrial con el respaldo de las marcas líderes del sector.
@@ -77,7 +77,7 @@ export default function Services() {
               <h3 className="font-semibold text-xl text-neutral-800 dark:text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify">
+              <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed text-left sm:text-justify">
                 {service.description}
               </p>
             </motion.div>

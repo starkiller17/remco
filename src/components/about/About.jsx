@@ -25,10 +25,10 @@ export default function About() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary dark:text-white mb-6">
               Empresa 100% mexicana
             </h2>
-            <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed mb-4 text-justify">
+            <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed mb-4 text-left sm:text-justify">
               Somos una empresa 100% mexicana, dando soluciones a sus aplicaciones de movimiento.
             </p>
-            <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4 text-justify">
+            <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4 text-left sm:text-justify">
               Ofrecemos marcas líderes en el mercado nacional e internacional en: Transmisión de Potencia, Motores - Controles & Servos AC/DC, Componentes para Automatización y Manejo de Materiales.
             </p>
 

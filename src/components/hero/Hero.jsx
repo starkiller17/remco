@@ -42,7 +42,7 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            className="text-neutral-200 text-lg leading-relaxed mb-8 max-w-xl text-justify"
+            className="text-neutral-200 text-lg leading-relaxed mb-8 max-w-xl text-left sm:text-justify"
           >
             Ayudamos a las empresas a cumplir la visión de sus procesos,
             mediante asesoría, implementación y servicio personalizados.<br />
