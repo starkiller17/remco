@@ -13,6 +13,7 @@ export const routes = [
     errorElement: <Error />,
     children: [{ index: true, element: <Home /> }],
   },
+  { path: '*', element: <Error /> },
 ];
 
 export const createRoot = ViteReactSSG({ routes });
